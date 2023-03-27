@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+.container {
+  height: 70svh;
+  width: 70dvw;
+  border: 2px dashed #3434344f;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.container-js{
+  border: 2px solid #ce0000;
+}
+i {
+  font-size: 11cqw;
+  color: #1edb09;
+}
+.container i {
+  opacity: 0.5;
+}
+.container i:active {
+  opacity: 1;
+}
+
+/* button */
+.custom-btn {
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px #ffffff80,
+    7px 7px 20px 0px #0000001a, 4px 4px 5px 0px #0000001a;
+  outline: none;
+}
+
+.btn {
+  background: #00acee;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #027efb;
+  transition: all 0.3s ease;
+}
+.btn:before {
+  height: 0%;
+  width: 2px;
+}
+.btn:after {
+  width: 0%;
+  height: 2px;
+}
+.btn:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn:hover:before {
+  height: 100%;
+}
+.btn:hover:after {
+  width: 100%;
+}
+.btn span:hover {
+  color: #027efb;
+}
+.btn span:before,
+.btn span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #027efb;
+  transition: all 0.3s ease;
+}
+.btn span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn span:hover:before {
+  height: 100%;
+}
+.btn span:hover:after {
+  width: 100%;
+}
+.btn span:active{
+  box-shadow: inset 5px 5px 5px 0px #ffffff80, 
+    inset 5px 5px 5px 0px,
+    7px 7px 20px 0px #00000000,
+    4px 4px 5px 0px #00000000;
+  outline: none;
+}
+
+
+/* media query */
+@media (min-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  button {
+    justify-self: end;
+  }
+}
