@@ -41,6 +41,8 @@ function data(){
             let imgURL = fileReader.result;
             let img = `<img src="${imgURL}" alt="photo">`;
             dragArea.innerHTML = img;
+            dragArea.classList.remove("container-js");
+            dragArea.classList.remove("container");
         } 
     }else{
         alert("This File is not valid");
